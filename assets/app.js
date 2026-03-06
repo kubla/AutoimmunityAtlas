@@ -22,6 +22,16 @@ function unique(items) {
   return [...new Set(items)];
 }
 
+function normalizeLinks(rawLinks) {
+  if (!rawLinks || typeof rawLinks !== "object") return {};
+
+  if (rawLinks.gene_to_snpedia && typeof rawLinks.gene_to_snpedia === "object") {
+    return rawLinks.gene_to_snpedia;
+  }
+
+  return rawLinks;
+}
+
 function validateData(clusters, disorders, glossary, links) {
   const messages = [];
   const clusterIds = new Set(clusters.map((cluster) => cluster.id));
@@ -133,12 +143,14 @@ function render() {
 }
 
 async function initialize() {
-  const [clusters, disorders, glossary, links] = await Promise.all([
+  const [clusters, disorders, glossary, rawLinks] = await Promise.all([
     fetch("./data/clusters.json").then((response) => response.json()),
     fetch("./data/disorders.json").then((response) => response.json()),
     fetch("./data/glossary.json").then((response) => response.json()),
     fetch("./data/links.json").then((response) => response.json())
   ]);
+
+  const links = normalizeLinks(rawLinks);
 
   state.clusters = clusters;
   state.disorders = disorders;
