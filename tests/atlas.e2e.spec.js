@@ -39,11 +39,27 @@ test.describe('Atlas shell and initialization', () => {
     const activeClusterButton = page.locator('#controls [data-cluster].active');
     await expect(activeClusterButton).toHaveCount(1);
     await expect(activeClusterButton).toHaveAttribute('data-cluster', firstCluster.id);
-    await expect(page.locator('svg .nodes circle')).toHaveCount(expectedFirstClusterCount);
+    await expect(page.locator('svg .nodes .node')).toHaveCount(expectedFirstClusterCount);
   });
 });
 
 test.describe('Filtering behavior', () => {
+
+  test('view toggle switches between map and cluster list views', async ({ page }) => {
+    await page.goto('./');
+
+    await expect(page.locator('#atlas-svg')).toBeVisible();
+    await expect(page.locator('#cluster-list')).toBeHidden();
+
+    await page.getByRole('button', { name: 'Cluster list view' }).click();
+    await expect(page.locator('#atlas-svg')).toBeHidden();
+    await expect(page.locator('#cluster-list')).toBeVisible();
+
+    await page.getByRole('button', { name: 'Map view' }).click();
+    await expect(page.locator('#atlas-svg')).toBeVisible();
+    await expect(page.locator('#cluster-list')).toBeHidden();
+  });
+
   test('cluster toggle can isolate a different cluster', async ({ page }) => {
     const secondCluster = [...clusters].sort((a, b) => a.order - b.order)[1];
     const expectedCount = disorders.filter((d) => d.primaryCluster === secondCluster.id).length;
@@ -53,7 +69,7 @@ test.describe('Filtering behavior', () => {
     await page.locator(`#controls [data-cluster="${secondCluster.id}"]`).click();
 
     await expect(page.locator(`#controls [data-cluster="${secondCluster.id}"].active`)).toHaveCount(1);
-    await expect(page.locator('svg .nodes circle')).toHaveCount(expectedCount);
+    await expect(page.locator('svg .nodes .node')).toHaveCount(expectedCount);
   });
 
   test('gene filter options are complete and filter visible nodes', async ({ page }) => {
@@ -68,7 +84,7 @@ test.describe('Filtering behavior', () => {
 
     await page.getByRole('button', { name: 'Clear filters' }).click();
     await page.selectOption('#gene-filter', targetGene);
-    await expect(page.locator('svg .nodes circle')).toHaveCount(expectedCount);
+    await expect(page.locator('svg .nodes .node')).toHaveCount(expectedCount);
   });
 
   test('clear filters resets cluster, tag, and gene filtering', async ({ page }) => {
@@ -85,7 +101,7 @@ test.describe('Filtering behavior', () => {
     await expect(page.locator('#controls [data-cluster].active')).toHaveCount(0);
     await expect(page.locator('#controls [data-tag].active')).toHaveCount(0);
     await expect(page.locator('#gene-filter')).toHaveValue('');
-    await expect(page.locator('svg .nodes circle')).toHaveCount(disorders.length);
+    await expect(page.locator('svg .nodes .node')).toHaveCount(disorders.length);
   });
 });
 
@@ -93,7 +109,7 @@ test.describe('Inspector integrity', () => {
   test('clicking a node opens a complete inspector in the expected section order', async ({ page }) => {
     await page.goto('./');
 
-    const firstNode = page.locator('svg .nodes circle').first();
+    const firstNode = page.locator('svg .nodes .node').first();
     await firstNode.click();
 
     await expect(page.locator('#inspector h2')).toBeVisible();
@@ -127,7 +143,7 @@ test.describe('Inspector integrity', () => {
     await page.goto('./');
     await page.getByRole('button', { name: 'Clear filters' }).click();
 
-    await page.locator('svg .nodes circle').first().click();
+    await page.locator('svg .nodes .node').first().click();
 
     const geneLinks = page.locator('#inspector .section h3:has-text("Genes") ~ a.chip');
     const count = await geneLinks.count();
@@ -146,7 +162,7 @@ test.describe('Inspector integrity', () => {
 
     await page.goto('./');
     await page.getByRole('button', { name: 'Clear filters' }).click();
-    await page.locator('svg .nodes circle').first().click();
+    await page.locator('svg .nodes .node').first().click();
 
     const contextualLinks = page.locator(
       '#inspector .section h3:has-text("Mechanism chain") + ol a, #inspector .section h3:has-text("Hallmarks") + ul a'

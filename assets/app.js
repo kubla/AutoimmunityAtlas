@@ -1,6 +1,6 @@
 import { createLinkifier } from "./linkify.js";
 import { renderMap } from "./viz.js";
-import { renderControls, renderInspector } from "./ui.js";
+import { renderClusterList, renderControls, renderInspector, renderMapToolbar } from "./ui.js";
 
 const state = {
   clusters: [],
@@ -11,12 +11,15 @@ const state = {
   activeClusters: new Set(),
   activeTags: new Set(),
   activeGene: "",
+  activeView: "map",
   onSelectionChanged: null
 };
 
 const controlsRoot = document.querySelector("#controls");
 const inspectorRoot = document.querySelector("#inspector");
 const svgElement = document.querySelector("#atlas-svg");
+const mapToolbarRoot = document.querySelector("#map-toolbar");
+const clusterListRoot = document.querySelector("#cluster-list");
 
 function unique(items) {
   return [...new Set(items)];
@@ -129,15 +132,33 @@ function render() {
     }
   });
 
-  renderMap(svgElement, state, derived, (disorderId) => {
-    state.selectedDisorderId = disorderId;
-    render();
+  renderMapToolbar(mapToolbarRoot, state, {
+    onSetView(view) {
+      state.activeView = view;
+      render();
+    }
   });
 
-  state.onSelectionChanged = () => renderMap(svgElement, state, buildDerived(), (id) => {
-    state.selectedDisorderId = id;
+  const onSelectDisorder = (disorderId) => {
+    state.selectedDisorderId = disorderId;
     render();
-  });
+  };
+
+  if (state.activeView === "map") {
+    svgElement.hidden = false;
+    clusterListRoot.hidden = true;
+    renderMap(svgElement, state, derived, onSelectDisorder);
+  } else {
+    svgElement.hidden = true;
+    clusterListRoot.hidden = false;
+    renderClusterList(clusterListRoot, state, derived, onSelectDisorder);
+  }
+
+  state.onSelectionChanged = () => {
+    if (state.activeView === "map") {
+      renderMap(svgElement, state, buildDerived(), onSelectDisorder);
+    }
+  };
 
   renderInspector(inspectorRoot, state, derived, linkifyText);
 }
