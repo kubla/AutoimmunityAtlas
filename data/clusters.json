@@ -1,0 +1,10 @@
+[
+  {"id":"central_tolerance","name":"Central tolerance defects","color":"#7c3aed","order":1},
+  {"id":"peripheral_tolerance","name":"Peripheral tolerance / Treg-checkpoint failure","color":"#2563eb","order":2},
+  {"id":"apoptosis","name":"Apoptosis / contraction failure","color":"#0f766e","order":3},
+  {"id":"inflammatory_brake","name":"Inflammatory brake failure","color":"#b45309","order":4},
+  {"id":"interferonopathy","name":"Interferonopathies","color":"#dc2626","order":5},
+  {"id":"jak_stat_gof","name":"JAK–STAT pathway GOF","color":"#ea580c","order":6},
+  {"id":"complement_clearance","name":"Complement / clearance defects","color":"#059669","order":7},
+  {"id":"bcell_tolerance","name":"B-cell tolerance / CVID-like overlap","color":"#0284c7","order":8}
+]

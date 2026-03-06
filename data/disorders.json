@@ -1,0 +1,201 @@
+[
+  {
+    "id":"aps1",
+    "name":"Autoimmune Polyendocrine Syndrome Type 1",
+    "aliases":["APS-1","APECED"],
+    "primaryCluster":"central_tolerance",
+    "secondaryClusters":["peripheral_tolerance"],
+    "genes":["AIRE"],
+    "inheritance":["Autosomal recessive"],
+    "mechanismChain":[
+      "AIRE loss impairs thymic expression of tissue-restricted self antigens.",
+      "Autoreactive T cells escape central tolerance deletion.",
+      "Escaped clones seed peripheral tissues and recruit inflammatory effectors.",
+      "Multigland autoimmunity follows with chronic endocrine failure."
+    ],
+    "hallmarks":["Hypoparathyroidism","Adrenal insufficiency","Chronic candidiasis"],
+    "tags":["polyendocrine","organ-specific autoimmunity","mucocutaneous candidiasis"],
+    "relatedPathway":["ipex","ctla4_haplo"],
+    "relatedPhenotype":["c1q_deficiency"],
+    "references":[
+      {"label":"GeneReviews: Autoimmune Polyendocrinopathy Syndrome Type 1","url":"https://www.ncbi.nlm.nih.gov/books/NBK279152/"},
+      {"label":"MedlinePlus: APECED","url":"https://medlineplus.gov/genetics/condition/autoimmune-polyendocrinopathy-candidiasis-ectodermal-dystrophy/"}
+    ]
+  },
+  {
+    "id":"ipex",
+    "name":"IPEX Syndrome",
+    "aliases":["Immune dysregulation, polyendocrinopathy, enteropathy, X-linked"],
+    "primaryCluster":"peripheral_tolerance",
+    "secondaryClusters":[],
+    "genes":["FOXP3"],
+    "inheritance":["X-linked"],
+    "mechanismChain":[
+      "FOXP3 defects cripple regulatory T cell lineage programming.",
+      "Suppressive control of activated effector T cells fails.",
+      "Peripheral checkpoint restraint collapses across gut, skin, and endocrine tissues.",
+      "Early severe autoimmunity emerges with enteropathy and endocrinopathy."
+    ],
+    "hallmarks":["Intractable enteropathy","Type 1 diabetes","Eczema"],
+    "tags":["early-onset autoimmunity","enteropathy","treg failure"],
+    "relatedPathway":["aps1","ctla4_haplo"],
+    "relatedPhenotype":["stat3_gof"],
+    "references":[
+      {"label":"GeneReviews: IPEX Syndrome","url":"https://www.ncbi.nlm.nih.gov/books/NBK1118/"}
+    ]
+  },
+  {
+    "id":"ctla4_haplo",
+    "name":"CTLA4 Haploinsufficiency",
+    "aliases":[],
+    "primaryCluster":"peripheral_tolerance",
+    "secondaryClusters":["bcell_tolerance"],
+    "genes":["CTLA4"],
+    "inheritance":["Autosomal dominant"],
+    "mechanismChain":[
+      "Reduced CTLA4 dosage weakens inhibitory signaling on activated T cells.",
+      "Persistent costimulation amplifies effector responses and tissue infiltration.",
+      "B-cell help becomes excessive and dysregulated.",
+      "Combined autoimmunity with hypogammaglobulinemia-like features develops."
+    ],
+    "hallmarks":["Lymphocytic organ infiltration","Autoimmune cytopenias","Hypogammaglobulinemia"],
+    "tags":["checkpoint failure","lymphoproliferation","autoimmune cytopenia"],
+    "relatedPathway":["ipex","taci_cvid"],
+    "relatedPhenotype":["alps_fas"],
+    "references":[
+      {"label":"GeneReviews: CTLA4 Haploinsufficiency","url":"https://www.ncbi.nlm.nih.gov/books/NBK500655/"}
+    ]
+  },
+  {
+    "id":"alps_fas",
+    "name":"Autoimmune Lymphoproliferative Syndrome (FAS)",
+    "aliases":["ALPS-FAS"],
+    "primaryCluster":"apoptosis",
+    "secondaryClusters":[],
+    "genes":["FAS"],
+    "inheritance":["Autosomal dominant"],
+    "mechanismChain":[
+      "FAS signaling defects block activation-induced apoptosis in lymphocytes.",
+      "Autoreactive and overactivated clones persist after immune responses.",
+      "Chronic lymphoproliferation sustains aberrant immune activation.",
+      "Autoimmune cytopenias and organomegaly follow from failed contraction."
+    ],
+    "hallmarks":["Lymphadenopathy","Splenomegaly","Autoimmune cytopenias"],
+    "tags":["lymphoproliferation","apoptosis defect","autoimmune cytopenia"],
+    "relatedPathway":["ctla4_haplo"],
+    "relatedPhenotype":["ha20"],
+    "references":[
+      {"label":"GeneReviews: Autoimmune Lymphoproliferative Syndrome","url":"https://www.ncbi.nlm.nih.gov/books/NBK1108/"}
+    ]
+  },
+  {
+    "id":"ha20",
+    "name":"A20 Haploinsufficiency",
+    "aliases":["HA20"],
+    "primaryCluster":"inflammatory_brake",
+    "secondaryClusters":[],
+    "genes":["TNFAIP3"],
+    "inheritance":["Autosomal dominant"],
+    "mechanismChain":[
+      "TNFAIP3 loss reduces A20-mediated negative feedback on NF-κB signaling.",
+      "Inflammatory transcription persists after cytokine or receptor stimulation.",
+      "Innate and adaptive immune circuits remain in a primed inflammatory state.",
+      "Behçet-like and autoimmune phenotypes emerge from unchecked inflammatory tone."
+    ],
+    "hallmarks":["Recurrent oral ulcers","Fevers","Autoimmune organ inflammation"],
+    "tags":["autoinflammation","nfkb","behcet-like"],
+    "relatedPathway":["alps_fas"],
+    "relatedPhenotype":["trex1_ags"],
+    "references":[
+      {"label":"MedlinePlus: TNFAIP3-related autoinflammatory syndrome","url":"https://medlineplus.gov/genetics/gene/tnfaip3/"}
+    ]
+  },
+  {
+    "id":"trex1_ags",
+    "name":"TREX1-related Interferonopathy",
+    "aliases":["Aicardi-Goutières syndrome spectrum"],
+    "primaryCluster":"interferonopathy",
+    "secondaryClusters":[],
+    "genes":["TREX1"],
+    "inheritance":["Autosomal recessive","Autosomal dominant"],
+    "mechanismChain":[
+      "TREX1 dysfunction allows intracellular DNA debris to accumulate.",
+      "Nucleic acid sensing pathways misclassify self DNA as viral danger.",
+      "Chronic type I interferon production establishes sustained antiviral tone.",
+      "Interferon-driven inflammation produces lupus-like autoimmunity and tissue injury."
+    ],
+    "hallmarks":["Lupus-like autoimmunity","Neurologic inflammation","Interferon signature"],
+    "tags":["interferonopathy","lupus-like","dna sensing"],
+    "relatedPathway":["ha20"],
+    "relatedPhenotype":["c1q_deficiency"],
+    "references":[
+      {"label":"GeneReviews: Aicardi-Goutières Syndrome","url":"https://www.ncbi.nlm.nih.gov/books/NBK1475/"}
+    ]
+  },
+  {
+    "id":"stat3_gof",
+    "name":"STAT3 Gain-of-Function Disease",
+    "aliases":["STAT3 GOF"],
+    "primaryCluster":"jak_stat_gof",
+    "secondaryClusters":["peripheral_tolerance"],
+    "genes":["STAT3"],
+    "inheritance":["Autosomal dominant"],
+    "mechanismChain":[
+      "Activating STAT3 variants prolong cytokine-driven transcriptional responses.",
+      "Effector differentiation outweighs regulatory counterprograms.",
+      "Barrier and endocrine tissues face chronic immune attack.",
+      "Multisystem autoimmunity coexists with recurrent infections and growth failure."
+    ],
+    "hallmarks":["Early-onset autoimmunity","Short stature","Recurrent infections"],
+    "tags":["jak-stat","early-onset autoimmunity","combined immune dysregulation"],
+    "relatedPathway":["ipex"],
+    "relatedPhenotype":["ctla4_haplo"],
+    "references":[
+      {"label":"GeneReviews: STAT3 Gain-of-Function Disease","url":"https://www.ncbi.nlm.nih.gov/books/NBK525987/"}
+    ]
+  },
+  {
+    "id":"c1q_deficiency",
+    "name":"C1q Deficiency",
+    "aliases":[],
+    "primaryCluster":"complement_clearance",
+    "secondaryClusters":[],
+    "genes":["C1Q"],
+    "inheritance":["Autosomal recessive"],
+    "mechanismChain":[
+      "Absent C1q impairs clearance of apoptotic debris and immune complexes.",
+      "Persistent self-antigen complexes remain available to antigen-presenting cells.",
+      "Autoantibody responses intensify and deposit immune complexes in tissues.",
+      "Severe early lupus-like disease develops with complement-mediated injury."
+    ],
+    "hallmarks":["Early severe lupus","Glomerulonephritis","Photosensitive rash"],
+    "tags":["complement deficiency","lupus-like","immune complex disease"],
+    "relatedPathway":["trex1_ags"],
+    "relatedPhenotype":["aps1"],
+    "references":[
+      {"label":"GeneReviews: Complement Component Deficiency","url":"https://www.ncbi.nlm.nih.gov/books/NBK27130/"}
+    ]
+  },
+  {
+    "id":"taci_cvid",
+    "name":"TACI-related CVID with Autoimmunity",
+    "aliases":["TNFRSF13B-related CVID overlap"],
+    "primaryCluster":"bcell_tolerance",
+    "secondaryClusters":["peripheral_tolerance"],
+    "genes":["TNFRSF13B"],
+    "inheritance":["Autosomal dominant","Autosomal recessive"],
+    "mechanismChain":[
+      "TNFRSF13B variants alter B-cell survival and class-switch checkpoints.",
+      "Low-affinity or autoreactive clones persist in peripheral B-cell compartments.",
+      "Immunoglobulin quality and quantity become unstable.",
+      "Recurrent infections coexist with autoimmune cytopenias and organ autoimmunity."
+    ],
+    "hallmarks":["Hypogammaglobulinemia","Autoimmune cytopenias","Recurrent sinopulmonary infections"],
+    "tags":["b-cell tolerance","cvid overlap","autoimmune cytopenia"],
+    "relatedPathway":["ctla4_haplo"],
+    "relatedPhenotype":["stat3_gof"],
+    "references":[
+      {"label":"MedlinePlus: TNFRSF13B gene","url":"https://medlineplus.gov/genetics/gene/tnfrsf13b/"}
+    ]
+  }
+]
