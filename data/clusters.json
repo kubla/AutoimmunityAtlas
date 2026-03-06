@@ -1,10 +1,58 @@
 [
-  {"id":"central_tolerance","name":"Central tolerance defects","color":"#7c3aed","order":1},
-  {"id":"peripheral_tolerance","name":"Peripheral tolerance / Treg-checkpoint failure","color":"#2563eb","order":2},
-  {"id":"apoptosis","name":"Apoptosis / contraction failure","color":"#0f766e","order":3},
-  {"id":"inflammatory_brake","name":"Inflammatory brake failure","color":"#b45309","order":4},
-  {"id":"interferonopathy","name":"Interferonopathies","color":"#dc2626","order":5},
-  {"id":"jak_stat_gof","name":"JAK–STAT pathway GOF","color":"#ea580c","order":6},
-  {"id":"complement_clearance","name":"Complement / clearance defects","color":"#059669","order":7},
-  {"id":"bcell_tolerance","name":"B-cell tolerance / CVID-like overlap","color":"#0284c7","order":8}
+  {
+    "id": "central_tolerance",
+    "name": "Central tolerance defects",
+    "one_liner": "Bad thymic education lets autoreactive lymphocytes escape deletion.",
+    "color": "#6f63ff",
+    "order": 1
+  },
+  {
+    "id": "peripheral_tolerance",
+    "name": "Peripheral tolerance / Treg and checkpoint failure",
+    "one_liner": "Regulatory circuits that should restrain activated lymphocytes fail outside the thymus.",
+    "color": "#2f80ed",
+    "order": 2
+  },
+  {
+    "id": "apoptosis_contraction",
+    "name": "Apoptosis / contraction failure",
+    "one_liner": "Activated lymphocytes that should die after an immune response remain alive and accumulate.",
+    "color": "#27ae60",
+    "order": 3
+  },
+  {
+    "id": "inflammatory_brake_failure",
+    "name": "Inflammatory brake failure",
+    "one_liner": "Pathways that normally damp inflammatory signaling fail, producing chronic innate immune activation.",
+    "color": "#f2994a",
+    "order": 4
+  },
+  {
+    "id": "interferonopathies",
+    "name": "Interferonopathies",
+    "one_liner": "Self nucleic acids or aberrant sensing pathways drive persistent type I interferon signaling.",
+    "color": "#eb5757",
+    "order": 5
+  },
+  {
+    "id": "jak_stat_gof",
+    "name": "JAK–STAT pathway GOF",
+    "one_liner": "Cytokine signaling is locked too far on, reshaping immune differentiation and tolerance.",
+    "color": "#bb6bd9",
+    "order": 6
+  },
+  {
+    "id": "complement_clearance",
+    "name": "Complement / clearance defects",
+    "one_liner": "Failure to clear immune complexes or extracellular chromatin turns self debris into antigen.",
+    "color": "#219ebc",
+    "order": 7
+  },
+  {
+    "id": "b_cell_tolerance",
+    "name": "B-cell tolerance / CVID-like autoimmunity overlap",
+    "one_liner": "B-cell deletion, maturation, or signaling is distorted, producing autoantibodies alongside immunodeficiency.",
+    "color": "#8ab17d",
+    "order": 8
+  }
 ]

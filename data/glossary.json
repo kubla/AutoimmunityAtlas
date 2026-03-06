@@ -1,11 +1,326 @@
 [
-  {"term":"central tolerance","url":"https://en.wikipedia.org/wiki/Central_tolerance"},
-  {"term":"regulatory T cells","url":"https://en.wikipedia.org/wiki/Regulatory_T_cell"},
-  {"term":"checkpoint","url":"https://en.wikipedia.org/wiki/Immune_checkpoint"},
-  {"term":"apoptosis","url":"https://en.wikipedia.org/wiki/Apoptosis"},
-  {"term":"NF-κB","url":"https://en.wikipedia.org/wiki/NF-%CE%BAB"},
-  {"term":"type I interferon","url":"https://en.wikipedia.org/wiki/Type_I_interferon"},
-  {"term":"JAK-STAT","url":"https://en.wikipedia.org/wiki/JAK-STAT_signaling_pathway"},
-  {"term":"immune complex","url":"https://en.wikipedia.org/wiki/Immune_complex"},
-  {"term":"B-cell","url":"https://en.wikipedia.org/wiki/B_cell"}
+  {
+    "key": "central tolerance",
+    "patterns": [
+      "central tolerance"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Immunological_tolerance",
+    "kind": "definition"
+  },
+  {
+    "key": "negative selection",
+    "patterns": [
+      "negative selection"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Thymic_selection",
+    "kind": "definition"
+  },
+  {
+    "key": "thymus",
+    "patterns": [
+      "thymus",
+      "thymic"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Thymus",
+    "kind": "definition"
+  },
+  {
+    "key": "peripheral tolerance",
+    "patterns": [
+      "peripheral tolerance"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Immunological_tolerance",
+    "kind": "definition"
+  },
+  {
+    "key": "regulatory T cell",
+    "patterns": [
+      "regulatory T cells",
+      "regulatory T cell",
+      "Treg",
+      "Tregs"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Regulatory_T_cell",
+    "kind": "definition"
+  },
+  {
+    "key": "immune checkpoint",
+    "patterns": [
+      "immune checkpoint",
+      "checkpoints"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Immune_checkpoint",
+    "kind": "definition"
+  },
+  {
+    "key": "costimulation",
+    "patterns": [
+      "costimulation",
+      "co-stimulation",
+      "co-stimulatory"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Co-stimulation",
+    "kind": "definition"
+  },
+  {
+    "key": "haploinsufficiency",
+    "patterns": [
+      "haploinsufficiency"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Haploinsufficiency",
+    "kind": "definition"
+  },
+  {
+    "key": "loss-of-function mutation",
+    "patterns": [
+      "loss-of-function",
+      "LOF"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Loss-of-function_mutation",
+    "kind": "definition"
+  },
+  {
+    "key": "gain-of-function mutation",
+    "patterns": [
+      "gain-of-function",
+      "GOF"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Gain-of-function_mutation",
+    "kind": "definition"
+  },
+  {
+    "key": "hypomorphic mutation",
+    "patterns": [
+      "hypomorphic"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Hypomorph",
+    "kind": "definition"
+  },
+  {
+    "key": "V(D)J recombination",
+    "patterns": [
+      "V(D)J recombination"
+    ],
+    "url": "https://en.wikipedia.org/wiki/V(D)J_recombination",
+    "kind": "definition"
+  },
+  {
+    "key": "T-cell receptor repertoire",
+    "patterns": [
+      "T-cell receptor repertoire",
+      "TCR repertoire"
+    ],
+    "url": "https://en.wikipedia.org/wiki/T-cell_receptor",
+    "kind": "definition"
+  },
+  {
+    "key": "B-cell receptor",
+    "patterns": [
+      "B-cell receptor",
+      "BCR"
+    ],
+    "url": "https://en.wikipedia.org/wiki/B-cell_receptor",
+    "kind": "definition"
+  },
+  {
+    "key": "activation-induced cell death",
+    "patterns": [
+      "activation-induced cell death"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Activation-induced_cell_death",
+    "kind": "definition"
+  },
+  {
+    "key": "apoptosis",
+    "patterns": [
+      "apoptosis"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Apoptosis",
+    "kind": "definition"
+  },
+  {
+    "key": "NF-κB",
+    "patterns": [
+      "NF-κB",
+      "NF-kB"
+    ],
+    "url": "https://en.wikipedia.org/wiki/NF-%CE%BAB",
+    "kind": "definition"
+  },
+  {
+    "key": "type I interferon",
+    "patterns": [
+      "type I interferon",
+      "interferon signature",
+      "IFN-I"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Type_I_interferon",
+    "kind": "definition"
+  },
+  {
+    "key": "immune complex",
+    "patterns": [
+      "immune complex",
+      "immune complexes"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Immune_complex",
+    "kind": "definition"
+  },
+  {
+    "key": "apoptotic debris",
+    "patterns": [
+      "apoptotic debris"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Apoptosis",
+    "kind": "definition"
+  },
+  {
+    "key": "endocytosis",
+    "patterns": [
+      "endocytosis"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Endocytosis",
+    "kind": "definition"
+  },
+  {
+    "key": "lysosomal degradation",
+    "patterns": [
+      "lysosomal degradation"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Lysosome",
+    "kind": "definition"
+  },
+  {
+    "key": "ubiquitination",
+    "patterns": [
+      "ubiquitination",
+      "ubiquitin"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Ubiquitin",
+    "kind": "definition"
+  },
+  {
+    "key": "deubiquitinase",
+    "patterns": [
+      "deubiquitinase",
+      "deubiquitinases"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Deubiquitinating_enzyme",
+    "kind": "definition"
+  },
+  {
+    "key": "germinal center",
+    "patterns": [
+      "germinal center",
+      "germinal centers"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Germinal_center",
+    "kind": "definition"
+  },
+  {
+    "key": "T follicular helper cell",
+    "patterns": [
+      "T follicular helper cell",
+      "T follicular helper cells",
+      "Tfh cell",
+      "Tfh cells"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Follicular_B_helper_T_cell",
+    "kind": "definition"
+  },
+  {
+    "key": "macrophage polarization",
+    "patterns": [
+      "macrophage polarization",
+      "M1 macrophages",
+      "M2 macrophages"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Macrophage#Subtypes",
+    "kind": "definition"
+  },
+  {
+    "key": "NETosis",
+    "patterns": [
+      "NETosis"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Neutrophil_extracellular_traps",
+    "kind": "definition"
+  },
+  {
+    "key": "complement system",
+    "patterns": [
+      "complement system",
+      "complement"
+    ],
+    "url": "https://medlineplus.gov/genetics/understanding/condition/complementdeficiencies/",
+    "kind": "definition"
+  },
+  {
+    "key": "lymphoproliferation",
+    "patterns": [
+      "lymphoproliferation",
+      "lymphoproliferative"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Lymphoproliferative_disorders",
+    "kind": "definition"
+  },
+  {
+    "key": "autoantibody",
+    "patterns": [
+      "autoantibody",
+      "autoantibodies"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Autoantibody",
+    "kind": "definition"
+  },
+  {
+    "key": "chromatin",
+    "patterns": [
+      "chromatin"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Chromatin",
+    "kind": "definition"
+  },
+  {
+    "key": "cGAS-STING",
+    "patterns": [
+      "cGAS-STING"
+    ],
+    "url": "https://en.wikipedia.org/wiki/CGAS-STING_cytosolic_DNA-sensing_pathway",
+    "kind": "definition"
+  },
+  {
+    "key": "MDA5",
+    "patterns": [
+      "MDA5"
+    ],
+    "url": "https://en.wikipedia.org/wiki/IFIH1",
+    "kind": "definition"
+  },
+  {
+    "key": "DNA sensing",
+    "patterns": [
+      "DNA sensing",
+      "DNA-sensing"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Pattern_recognition_receptor",
+    "kind": "definition"
+  },
+  {
+    "key": "linear ubiquitin",
+    "patterns": [
+      "linear ubiquitin",
+      "linear ubiquitination"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Ubiquitin#Polyubiquitin_chains",
+    "kind": "definition"
+  },
+  {
+    "key": "high-affinity IL-2 receptor",
+    "patterns": [
+      "high-affinity IL-2 receptor"
+    ],
+    "url": "https://en.wikipedia.org/wiki/Interleukin-2_receptor",
+    "kind": "definition"
+  }
 ]

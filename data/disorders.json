@@ -1,201 +1,1663 @@
 [
   {
-    "id":"aps1",
-    "name":"Autoimmune Polyendocrine Syndrome Type 1",
-    "aliases":["APS-1","APECED"],
-    "primaryCluster":"central_tolerance",
-    "secondaryClusters":["peripheral_tolerance"],
-    "genes":["AIRE"],
-    "inheritance":["Autosomal recessive"],
-    "mechanismChain":[
-      "AIRE loss impairs thymic expression of tissue-restricted self antigens.",
-      "Autoreactive T cells escape central tolerance deletion.",
-      "Escaped clones seed peripheral tissues and recruit inflammatory effectors.",
-      "Multigland autoimmunity follows with chronic endocrine failure."
+    "id": "apeced",
+    "name": "APECED / APS-1",
+    "aliases": [
+      "Autoimmune polyendocrinopathy-candidiasis-ectodermal dystrophy",
+      "Autoimmune polyendocrine syndrome type 1"
     ],
-    "hallmarks":["Hypoparathyroidism","Adrenal insufficiency","Chronic candidiasis"],
-    "tags":["polyendocrine","organ-specific autoimmunity","mucocutaneous candidiasis"],
-    "relatedPathway":["ipex","ctla4_haplo"],
-    "relatedPhenotype":["c1q_deficiency"],
-    "references":[
-      {"label":"GeneReviews: Autoimmune Polyendocrinopathy Syndrome Type 1","url":"https://www.ncbi.nlm.nih.gov/books/NBK279152/"},
-      {"label":"MedlinePlus: APECED","url":"https://medlineplus.gov/genetics/condition/autoimmune-polyendocrinopathy-candidiasis-ectodermal-dystrophy/"}
+    "primaryCluster": "central_tolerance",
+    "secondaryClusters": [],
+    "genes": [
+      "AIRE"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "AIRE loss-of-function reduces ectopic tissue-antigen expression by medullary thymic epithelial cells in the thymus.",
+      "Negative selection is weakened, so autoreactive T cells escape central tolerance.",
+      "Escaped autoreactive lymphocytes attack multiple peripheral tissues instead of remaining ignorant of self.",
+      "The result is multi-organ autoimmunity, classically with endocrine disease and chronic mucocutaneous candidiasis."
+    ],
+    "hallmarks": [
+      "endocrinopathy",
+      "chronic mucocutaneous candidiasis",
+      "multi-organ autoimmunity",
+      "autoantibodies",
+      "hypoparathyroidism",
+      "adrenal insufficiency"
+    ],
+    "tags": [
+      "endocrinopathy",
+      "chronic candidiasis",
+      "autoantibodies"
+    ],
+    "relatedPathway": [
+      "omenn_syndrome",
+      "ipex"
+    ],
+    "relatedPhenotype": [
+      "early_classical_complement_deficiency",
+      "dnase1l3_deficiency"
+    ],
+    "references": [
+      {
+        "label": "Monogenic autoimmune disease review (Frontiers)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11114701/"
+      },
+      {
+        "label": "AIRE and central tolerance review",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11114701/"
+      }
     ]
   },
   {
-    "id":"ipex",
-    "name":"IPEX Syndrome",
-    "aliases":["Immune dysregulation, polyendocrinopathy, enteropathy, X-linked"],
-    "primaryCluster":"peripheral_tolerance",
-    "secondaryClusters":[],
-    "genes":["FOXP3"],
-    "inheritance":["X-linked"],
-    "mechanismChain":[
-      "FOXP3 defects cripple regulatory T cell lineage programming.",
-      "Suppressive control of activated effector T cells fails.",
-      "Peripheral checkpoint restraint collapses across gut, skin, and endocrine tissues.",
-      "Early severe autoimmunity emerges with enteropathy and endocrinopathy."
+    "id": "omenn_syndrome",
+    "name": "Omenn syndrome",
+    "aliases": [
+      "RAG-associated Omenn syndrome"
     ],
-    "hallmarks":["Intractable enteropathy","Type 1 diabetes","Eczema"],
-    "tags":["early-onset autoimmunity","enteropathy","treg failure"],
-    "relatedPathway":["aps1","ctla4_haplo"],
-    "relatedPhenotype":["stat3_gof"],
-    "references":[
-      {"label":"GeneReviews: IPEX Syndrome","url":"https://www.ncbi.nlm.nih.gov/books/NBK1118/"}
+    "primaryCluster": "central_tolerance",
+    "secondaryClusters": [],
+    "genes": [
+      "RAG1",
+      "RAG2"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "Hypomorphic RAG1 or RAG2 mutations impair V(D)J recombination instead of abolishing it completely.",
+      "The surviving T-cell receptor repertoire becomes severely restricted and oligoclonal, while B-cell development is poor.",
+      "Autoreactive activated T cells expand in the setting of defective immune regulation and incomplete central tolerance.",
+      "That combination produces erythroderma, enteropathy, eosinophilia, and severe immune dysregulation on a SCID spectrum."
+    ],
+    "hallmarks": [
+      "erythroderma",
+      "enteropathy",
+      "eosinophilia",
+      "lymphadenopathy",
+      "hepatosplenomegaly",
+      "recurrent infection"
+    ],
+    "tags": [
+      "enteropathy",
+      "recurrent infection",
+      "lymphoproliferation"
+    ],
+    "relatedPathway": [
+      "apeced",
+      "ipex",
+      "il2ra_deficiency"
+    ],
+    "relatedPhenotype": [
+      "alps_fas_pathway",
+      "ctla4_haploinsufficiency"
+    ],
+    "references": [
+      {
+        "label": "Omenn syndrome review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4388548/"
+      },
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
     ]
   },
   {
-    "id":"ctla4_haplo",
-    "name":"CTLA4 Haploinsufficiency",
-    "aliases":[],
-    "primaryCluster":"peripheral_tolerance",
-    "secondaryClusters":["bcell_tolerance"],
-    "genes":["CTLA4"],
-    "inheritance":["Autosomal dominant"],
-    "mechanismChain":[
-      "Reduced CTLA4 dosage weakens inhibitory signaling on activated T cells.",
-      "Persistent costimulation amplifies effector responses and tissue infiltration.",
-      "B-cell help becomes excessive and dysregulated.",
-      "Combined autoimmunity with hypogammaglobulinemia-like features develops."
+    "id": "ipex",
+    "name": "IPEX",
+    "aliases": [
+      "Immune dysregulation, polyendocrinopathy, enteropathy, X-linked syndrome"
     ],
-    "hallmarks":["Lymphocytic organ infiltration","Autoimmune cytopenias","Hypogammaglobulinemia"],
-    "tags":["checkpoint failure","lymphoproliferation","autoimmune cytopenia"],
-    "relatedPathway":["ipex","taci_cvid"],
-    "relatedPhenotype":["alps_fas"],
-    "references":[
-      {"label":"GeneReviews: CTLA4 Haploinsufficiency","url":"https://www.ncbi.nlm.nih.gov/books/NBK500655/"}
+    "primaryCluster": "peripheral_tolerance",
+    "secondaryClusters": [],
+    "genes": [
+      "FOXP3"
+    ],
+    "inheritance": [
+      "X-linked"
+    ],
+    "mechanismChain": [
+      "FOXP3 loss-of-function prevents normal development and maintenance of regulatory T cells.",
+      "Without functional Tregs, activated effector T cells are not adequately suppressed in peripheral tissues.",
+      "Peripheral tolerance collapses across mucosal, endocrine, and cutaneous compartments.",
+      "The syndrome classically presents with severe enteropathy, eczema, and early endocrine autoimmunity such as type 1 diabetes."
+    ],
+    "hallmarks": [
+      "autoimmune enteropathy",
+      "eczema",
+      "type 1 diabetes",
+      "thyroid disease",
+      "failure to thrive",
+      "autoantibodies"
+    ],
+    "tags": [
+      "enteropathy",
+      "dermatitis",
+      "endocrinopathy",
+      "autoantibodies"
+    ],
+    "relatedPathway": [
+      "il2ra_deficiency",
+      "il2rb_deficiency",
+      "stat5b_deficiency",
+      "ctla4_haploinsufficiency"
+    ],
+    "relatedPhenotype": [
+      "apeced",
+      "stat3_gof_disease"
+    ],
+    "references": [
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      },
+      {
+        "label": "FOXP3 and IPEX review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
     ]
   },
   {
-    "id":"alps_fas",
-    "name":"Autoimmune Lymphoproliferative Syndrome (FAS)",
-    "aliases":["ALPS-FAS"],
-    "primaryCluster":"apoptosis",
-    "secondaryClusters":[],
-    "genes":["FAS"],
-    "inheritance":["Autosomal dominant"],
-    "mechanismChain":[
-      "FAS signaling defects block activation-induced apoptosis in lymphocytes.",
-      "Autoreactive and overactivated clones persist after immune responses.",
-      "Chronic lymphoproliferation sustains aberrant immune activation.",
-      "Autoimmune cytopenias and organomegaly follow from failed contraction."
+    "id": "il2ra_deficiency",
+    "name": "IL2RA deficiency",
+    "aliases": [
+      "CD25 deficiency"
     ],
-    "hallmarks":["Lymphadenopathy","Splenomegaly","Autoimmune cytopenias"],
-    "tags":["lymphoproliferation","apoptosis defect","autoimmune cytopenia"],
-    "relatedPathway":["ctla4_haplo"],
-    "relatedPhenotype":["ha20"],
-    "references":[
-      {"label":"GeneReviews: Autoimmune Lymphoproliferative Syndrome","url":"https://www.ncbi.nlm.nih.gov/books/NBK1108/"}
+    "primaryCluster": "peripheral_tolerance",
+    "secondaryClusters": [],
+    "genes": [
+      "IL2RA"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "IL2RA loss removes CD25, the alpha chain of the high-affinity IL-2 receptor.",
+      "Regulatory T cells, which constitutively depend on very low concentrations of IL-2, lose a key survival and maintenance signal.",
+      "FOXP3 expression and Treg homeostasis become unstable, while activated effector cells are not properly restrained.",
+      "The resulting phenotype is IPEX-like immune dysregulation with severe enteropathy, autoimmunity, lymphoproliferation, and infection susceptibility."
+    ],
+    "hallmarks": [
+      "autoimmune enteropathy",
+      "lymphadenopathy",
+      "hepatosplenomegaly",
+      "eczema",
+      "autoantibodies",
+      "CMV susceptibility"
+    ],
+    "tags": [
+      "enteropathy",
+      "dermatitis",
+      "lymphoproliferation",
+      "autoantibodies",
+      "recurrent infection"
+    ],
+    "relatedPathway": [
+      "ipex",
+      "il2rb_deficiency",
+      "stat5b_deficiency"
+    ],
+    "relatedPhenotype": [
+      "ctla4_haploinsufficiency",
+      "omenn_syndrome"
+    ],
+    "references": [
+      {
+        "label": "IL2RA deficiency case review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4312743/"
+      },
+      {
+        "label": "PIRD mechanisms review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
     ]
   },
   {
-    "id":"ha20",
-    "name":"A20 Haploinsufficiency",
-    "aliases":["HA20"],
-    "primaryCluster":"inflammatory_brake",
-    "secondaryClusters":[],
-    "genes":["TNFAIP3"],
-    "inheritance":["Autosomal dominant"],
-    "mechanismChain":[
-      "TNFAIP3 loss reduces A20-mediated negative feedback on NF-κB signaling.",
-      "Inflammatory transcription persists after cytokine or receptor stimulation.",
-      "Innate and adaptive immune circuits remain in a primed inflammatory state.",
-      "Behçet-like and autoimmune phenotypes emerge from unchecked inflammatory tone."
+    "id": "il2rb_deficiency",
+    "name": "IL2RB deficiency",
+    "aliases": [
+      "CD122 deficiency"
     ],
-    "hallmarks":["Recurrent oral ulcers","Fevers","Autoimmune organ inflammation"],
-    "tags":["autoinflammation","nfkb","behcet-like"],
-    "relatedPathway":["alps_fas"],
-    "relatedPhenotype":["trex1_ags"],
-    "references":[
-      {"label":"MedlinePlus: TNFAIP3-related autoinflammatory syndrome","url":"https://medlineplus.gov/genetics/gene/tnfaip3/"}
+    "primaryCluster": "peripheral_tolerance",
+    "secondaryClusters": [],
+    "genes": [
+      "IL2RB"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "IL2RB defects reduce IL-2Rβ expression or signaling downstream of IL-2 and IL-15.",
+      "Regulatory T-cell support falls while NK-cell and cytotoxic lymphocyte homeostasis is also disturbed.",
+      "The immune system combines impaired control of self-reactivity with poor antiviral defense.",
+      "Infants can therefore develop multisystem autoimmunity alongside severe CMV susceptibility and immune dysregulation."
+    ],
+    "hallmarks": [
+      "multisystem autoimmunity",
+      "CMV disease",
+      "enteropathy",
+      "hepatosplenomegaly",
+      "dermatitis",
+      "lymphoproliferation"
+    ],
+    "tags": [
+      "enteropathy",
+      "dermatitis",
+      "lymphoproliferation",
+      "recurrent infection"
+    ],
+    "relatedPathway": [
+      "ipex",
+      "il2ra_deficiency",
+      "stat5b_deficiency"
+    ],
+    "relatedPhenotype": [
+      "stat1_gof_disease",
+      "omenn_syndrome"
+    ],
+    "references": [
+      {
+        "label": "Human IL2RB deficiency study (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6547857/"
+      },
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
     ]
   },
   {
-    "id":"trex1_ags",
-    "name":"TREX1-related Interferonopathy",
-    "aliases":["Aicardi-Goutières syndrome spectrum"],
-    "primaryCluster":"interferonopathy",
-    "secondaryClusters":[],
-    "genes":["TREX1"],
-    "inheritance":["Autosomal recessive","Autosomal dominant"],
-    "mechanismChain":[
-      "TREX1 dysfunction allows intracellular DNA debris to accumulate.",
-      "Nucleic acid sensing pathways misclassify self DNA as viral danger.",
-      "Chronic type I interferon production establishes sustained antiviral tone.",
-      "Interferon-driven inflammation produces lupus-like autoimmunity and tissue injury."
+    "id": "stat5b_deficiency",
+    "name": "STAT5B deficiency",
+    "aliases": [],
+    "primaryCluster": "peripheral_tolerance",
+    "secondaryClusters": [],
+    "genes": [
+      "STAT5B"
     ],
-    "hallmarks":["Lupus-like autoimmunity","Neurologic inflammation","Interferon signature"],
-    "tags":["interferonopathy","lupus-like","dna sensing"],
-    "relatedPathway":["ha20"],
-    "relatedPhenotype":["c1q_deficiency"],
-    "references":[
-      {"label":"GeneReviews: Aicardi-Goutières Syndrome","url":"https://www.ncbi.nlm.nih.gov/books/NBK1475/"}
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "STAT5B deficiency blocks a key transcriptional output of IL-2 signaling.",
+      "Regulatory T cells cannot maintain FOXP3 expression and suppressive function efficiently.",
+      "Peripheral tolerance weakens while other cytokine programs and growth hormone signaling also fail.",
+      "The phenotype mixes immune dysregulation and autoimmunity with severe postnatal growth failure."
+    ],
+    "hallmarks": [
+      "short stature",
+      "eczema",
+      "autoimmunity",
+      "recurrent infections",
+      "interstitial lung disease",
+      "low Treg function"
+    ],
+    "tags": [
+      "dermatitis",
+      "recurrent infection",
+      "interstitial lung disease"
+    ],
+    "relatedPathway": [
+      "ipex",
+      "il2ra_deficiency",
+      "il2rb_deficiency"
+    ],
+    "relatedPhenotype": [
+      "stat3_gof_disease",
+      "ctla4_haploinsufficiency"
+    ],
+    "references": [
+      {
+        "label": "STAT5B deficiency review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      },
+      {
+        "label": "STAT5B deficiency overview (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5753674/"
+      }
     ]
   },
   {
-    "id":"stat3_gof",
-    "name":"STAT3 Gain-of-Function Disease",
-    "aliases":["STAT3 GOF"],
-    "primaryCluster":"jak_stat_gof",
-    "secondaryClusters":["peripheral_tolerance"],
-    "genes":["STAT3"],
-    "inheritance":["Autosomal dominant"],
-    "mechanismChain":[
-      "Activating STAT3 variants prolong cytokine-driven transcriptional responses.",
-      "Effector differentiation outweighs regulatory counterprograms.",
-      "Barrier and endocrine tissues face chronic immune attack.",
-      "Multisystem autoimmunity coexists with recurrent infections and growth failure."
+    "id": "ctla4_haploinsufficiency",
+    "name": "CTLA-4 haploinsufficiency",
+    "aliases": [],
+    "primaryCluster": "peripheral_tolerance",
+    "secondaryClusters": [],
+    "genes": [
+      "CTLA4"
     ],
-    "hallmarks":["Early-onset autoimmunity","Short stature","Recurrent infections"],
-    "tags":["jak-stat","early-onset autoimmunity","combined immune dysregulation"],
-    "relatedPathway":["ipex"],
-    "relatedPhenotype":["ctla4_haplo"],
-    "references":[
-      {"label":"GeneReviews: STAT3 Gain-of-Function Disease","url":"https://www.ncbi.nlm.nih.gov/books/NBK525987/"}
+    "inheritance": [
+      "Autosomal dominant"
+    ],
+    "mechanismChain": [
+      "CTLA4 haploinsufficiency reduces the amount of CTLA-4 available on activated T cells and regulatory T cells.",
+      "CTLA-4 can no longer compete effectively with CD28 for CD80 and CD86, so costimulatory signaling stays too strong.",
+      "Activated lymphocytes persist and peripheral tolerance erodes across multiple organs.",
+      "The resulting syndrome features autoimmunity, lymphoproliferation, organ infiltration, and frequent hypogammaglobulinemia."
+    ],
+    "hallmarks": [
+      "autoimmune cytopenias",
+      "lymphadenopathy",
+      "splenomegaly",
+      "enteropathy",
+      "interstitial lung disease",
+      "hypogammaglobulinemia"
+    ],
+    "tags": [
+      "autoimmune cytopenias",
+      "lymphoproliferation",
+      "enteropathy",
+      "interstitial lung disease",
+      "hypogammaglobulinemia"
+    ],
+    "relatedPathway": [
+      "lrba_deficiency",
+      "def6_deficiency",
+      "ipex",
+      "stat3_gof_disease"
+    ],
+    "relatedPhenotype": [
+      "alps_fas_pathway",
+      "activated_pi3k_delta_syndrome"
+    ],
+    "references": [
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      },
+      {
+        "label": "CTLA-4 and LRBA review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
     ]
   },
   {
-    "id":"c1q_deficiency",
-    "name":"C1q Deficiency",
-    "aliases":[],
-    "primaryCluster":"complement_clearance",
-    "secondaryClusters":[],
-    "genes":["C1Q"],
-    "inheritance":["Autosomal recessive"],
-    "mechanismChain":[
-      "Absent C1q impairs clearance of apoptotic debris and immune complexes.",
-      "Persistent self-antigen complexes remain available to antigen-presenting cells.",
-      "Autoantibody responses intensify and deposit immune complexes in tissues.",
-      "Severe early lupus-like disease develops with complement-mediated injury."
+    "id": "lrba_deficiency",
+    "name": "LRBA deficiency",
+    "aliases": [],
+    "primaryCluster": "peripheral_tolerance",
+    "secondaryClusters": [],
+    "genes": [
+      "LRBA"
     ],
-    "hallmarks":["Early severe lupus","Glomerulonephritis","Photosensitive rash"],
-    "tags":["complement deficiency","lupus-like","immune complex disease"],
-    "relatedPathway":["trex1_ags"],
-    "relatedPhenotype":["aps1"],
-    "references":[
-      {"label":"GeneReviews: Complement Component Deficiency","url":"https://www.ncbi.nlm.nih.gov/books/NBK27130/"}
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "LRBA normally protects CTLA-4 from lysosomal degradation during intracellular trafficking.",
+      "When LRBA is absent, surface CTLA-4 expression falls even though the CTLA4 gene itself is intact.",
+      "That creates a functional CTLA-4 deficiency with weak checkpoint control of activated lymphocytes.",
+      "Patients develop a CTLA4-like syndrome with autoimmunity, lymphoproliferation, enteropathy, and hypogammaglobulinemia."
+    ],
+    "hallmarks": [
+      "autoimmune cytopenias",
+      "enteropathy",
+      "lymphadenopathy",
+      "splenomegaly",
+      "hypogammaglobulinemia",
+      "recurrent infections"
+    ],
+    "tags": [
+      "autoimmune cytopenias",
+      "enteropathy",
+      "lymphoproliferation",
+      "hypogammaglobulinemia",
+      "recurrent infection"
+    ],
+    "relatedPathway": [
+      "ctla4_haploinsufficiency",
+      "def6_deficiency",
+      "ipex"
+    ],
+    "relatedPhenotype": [
+      "activated_pi3k_delta_syndrome",
+      "alps_fas_pathway"
+    ],
+    "references": [
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      },
+      {
+        "label": "CTLA-4 trafficking review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
     ]
   },
   {
-    "id":"taci_cvid",
-    "name":"TACI-related CVID with Autoimmunity",
-    "aliases":["TNFRSF13B-related CVID overlap"],
-    "primaryCluster":"bcell_tolerance",
-    "secondaryClusters":["peripheral_tolerance"],
-    "genes":["TNFRSF13B"],
-    "inheritance":["Autosomal dominant","Autosomal recessive"],
-    "mechanismChain":[
-      "TNFRSF13B variants alter B-cell survival and class-switch checkpoints.",
-      "Low-affinity or autoreactive clones persist in peripheral B-cell compartments.",
-      "Immunoglobulin quality and quantity become unstable.",
-      "Recurrent infections coexist with autoimmune cytopenias and organ autoimmunity."
+    "id": "def6_deficiency",
+    "name": "DEF6 deficiency",
+    "aliases": [],
+    "primaryCluster": "peripheral_tolerance",
+    "secondaryClusters": [],
+    "genes": [
+      "DEF6"
     ],
-    "hallmarks":["Hypogammaglobulinemia","Autoimmune cytopenias","Recurrent sinopulmonary infections"],
-    "tags":["b-cell tolerance","cvid overlap","autoimmune cytopenia"],
-    "relatedPathway":["ctla4_haplo"],
-    "relatedPhenotype":["stat3_gof"],
-    "references":[
-      {"label":"MedlinePlus: TNFRSF13B gene","url":"https://medlineplus.gov/genetics/gene/tnfrsf13b/"}
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "DEF6 helps move CTLA-4-containing vesicles to the cell surface through interaction with RAB11.",
+      "DEF6 deficiency impairs CTLA-4 trafficking even when CTLA-4 protein can still be made.",
+      "Checkpoint restraint on activated T cells weakens, and germinal-center help becomes poorly controlled.",
+      "The phenotype is systemic autoimmunity with immune dysregulation that mechanistically sits close to CTLA4 and LRBA deficiency."
+    ],
+    "hallmarks": [
+      "systemic autoimmunity",
+      "arthritis",
+      "cytopenias",
+      "enteropathy",
+      "lymphoproliferation",
+      "autoantibodies"
+    ],
+    "tags": [
+      "autoimmune cytopenias",
+      "enteropathy",
+      "lymphoproliferation",
+      "autoantibodies"
+    ],
+    "relatedPathway": [
+      "ctla4_haploinsufficiency",
+      "lrba_deficiency",
+      "bach2_related_immunodeficiency_and_autoimmunity"
+    ],
+    "relatedPhenotype": [
+      "activated_pi3k_delta_syndrome",
+      "prkcd_deficiency"
+    ],
+    "references": [
+      {
+        "label": "DEF6 deficiency and CTLA-4 homeostasis (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6629652/"
+      },
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
+    ]
+  },
+  {
+    "id": "itch_deficiency",
+    "name": "ITCH deficiency",
+    "aliases": [],
+    "primaryCluster": "peripheral_tolerance",
+    "secondaryClusters": [],
+    "genes": [
+      "ITCH"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "ITCH encodes an E3 ubiquitin ligase that helps impose T-cell anergy by targeting signaling proteins such as PLCγ1 and PKCθ.",
+      "It also supports regulatory T-cell generation through TIEG1-dependent control of FOXP3 expression.",
+      "Loss of ITCH therefore removes two layers of restraint: effector cells are harder to silence and Treg biology is weaker.",
+      "Patients can develop early-onset autoimmunity, chronic lung inflammation, and combined immune dysregulation."
+    ],
+    "hallmarks": [
+      "interstitial pneumonitis",
+      "autoimmunity",
+      "failure to thrive",
+      "developmental delay",
+      "autoantibodies",
+      "chronic lung disease"
+    ],
+    "tags": [
+      "interstitial lung disease",
+      "autoantibodies",
+      "dermatitis"
+    ],
+    "relatedPathway": [
+      "ipex",
+      "stat5b_deficiency",
+      "def6_deficiency"
+    ],
+    "relatedPhenotype": [
+      "stat3_gof_disease",
+      "ctla4_haploinsufficiency"
+    ],
+    "references": [
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      },
+      {
+        "label": "ITCH deficiency review chapter (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
+    ]
+  },
+  {
+    "id": "bach2_related_immunodeficiency_and_autoimmunity",
+    "name": "BACH2-related immunodeficiency and autoimmunity",
+    "aliases": [
+      "BACH2 haploinsufficiency",
+      "BRIDA"
+    ],
+    "primaryCluster": "peripheral_tolerance",
+    "secondaryClusters": [],
+    "genes": [
+      "BACH2"
+    ],
+    "inheritance": [
+      "Autosomal dominant"
+    ],
+    "mechanismChain": [
+      "BACH2 normally restrains terminal effector differentiation and limits T follicular helper cell programs.",
+      "Haploinsufficiency removes that transcriptional brake and skews lymphocytes toward pathogenic helper and plasma-cell states.",
+      "Tolerance in germinal centers becomes less stable, while immunoglobulin maturation also becomes abnormal.",
+      "The phenotype mixes autoimmunity, intestinal inflammation, and immunodeficiency."
+    ],
+    "hallmarks": [
+      "intestinal inflammation",
+      "recurrent infections",
+      "hypogammaglobulinemia",
+      "autoimmunity",
+      "lymphoid hyperplasia"
+    ],
+    "tags": [
+      "enteropathy",
+      "hypogammaglobulinemia",
+      "recurrent infection",
+      "autoantibodies"
+    ],
+    "relatedPathway": [
+      "def6_deficiency",
+      "ctla4_haploinsufficiency",
+      "activated_pi3k_delta_syndrome"
+    ],
+    "relatedPhenotype": [
+      "prkcd_deficiency",
+      "lrba_deficiency"
+    ],
+    "references": [
+      {
+        "label": "BACH2 haploinsufficiency paper (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5593426/"
+      },
+      {
+        "label": "BACH2 restrains Tfh differentiation (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3563746/"
+      }
+    ]
+  },
+  {
+    "id": "alps_fas_pathway",
+    "name": "Autoimmune lymphoproliferative syndrome",
+    "aliases": [
+      "ALPS"
+    ],
+    "primaryCluster": "apoptosis_contraction",
+    "secondaryClusters": [],
+    "genes": [
+      "FAS",
+      "FASLG",
+      "CASP10"
+    ],
+    "inheritance": [
+      "Autosomal dominant",
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "FAS pathway defects impair activation-induced cell death after lymphocytes have been expanded by antigen.",
+      "Activated autoreactive lymphocytes therefore fail to undergo normal contraction and persist in circulation and lymphoid tissue.",
+      "Double-negative T cells accumulate, and self-reactive clones are not pruned efficiently.",
+      "The hallmark phenotype is chronic lymphadenopathy or splenomegaly with autoimmune cytopenias and elevated lymphoma risk."
+    ],
+    "hallmarks": [
+      "autoimmune cytopenias",
+      "lymphadenopathy",
+      "splenomegaly",
+      "double-negative T cells",
+      "lymphoma risk",
+      "hepatosplenomegaly"
+    ],
+    "tags": [
+      "autoimmune cytopenias",
+      "lymphoproliferation"
+    ],
+    "relatedPathway": [
+      "casp8_deficiency",
+      "fadd_deficiency",
+      "ctla4_haploinsufficiency"
+    ],
+    "relatedPhenotype": [
+      "activated_pi3k_delta_syndrome",
+      "stat3_gof_disease"
+    ],
+    "references": [
+      {
+        "label": "ALPS chapter (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      },
+      {
+        "label": "ALPS overview (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5877483/"
+      }
+    ]
+  },
+  {
+    "id": "casp8_deficiency",
+    "name": "CASP8 deficiency",
+    "aliases": [],
+    "primaryCluster": "apoptosis_contraction",
+    "secondaryClusters": [],
+    "genes": [
+      "CASP8"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "CASP8 sits downstream of death-receptor signaling and helps execute extrinsic apoptosis.",
+      "When CASP8 is absent, activated lymphocytes are harder to delete, but innate and epithelial signaling programs are also perturbed.",
+      "The disease therefore overlaps ALPS mechanistically while extending into infection susceptibility and inflammatory bowel phenotypes.",
+      "Patients can present with ALPS-like autoimmunity, lymphoproliferation, or very-early-onset inflammatory bowel disease."
+    ],
+    "hallmarks": [
+      "lymphoproliferation",
+      "autoimmunity",
+      "very-early-onset IBD",
+      "recurrent infections",
+      "splenomegaly"
+    ],
+    "tags": [
+      "autoimmune cytopenias",
+      "lymphoproliferation",
+      "enteropathy",
+      "recurrent infection"
+    ],
+    "relatedPathway": [
+      "alps_fas_pathway",
+      "fadd_deficiency",
+      "il10_signaling_deficiency"
+    ],
+    "relatedPhenotype": [
+      "omenn_syndrome",
+      "ctla4_haploinsufficiency"
+    ],
+    "references": [
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      },
+      {
+        "label": "ALPS and related disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
+    ]
+  },
+  {
+    "id": "fadd_deficiency",
+    "name": "FADD deficiency",
+    "aliases": [],
+    "primaryCluster": "apoptosis_contraction",
+    "secondaryClusters": [],
+    "genes": [
+      "FADD"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "FADD is the death-domain adaptor that connects activated FAS-family receptors to the caspase machinery.",
+      "Loss of FADD blocks efficient extrinsic apoptosis, so activated lymphocytes are not culled normally.",
+      "The pathway defect also disturbs broader host-defense and inflammatory responses.",
+      "Patients show ALPS-like immune dysregulation together with recurrent invasive infection and, in some families, severe neurologic inflammation."
+    ],
+    "hallmarks": [
+      "autoimmunity",
+      "lymphoproliferation",
+      "recurrent pneumococcal infection",
+      "encephalopathy",
+      "hepatosplenomegaly"
+    ],
+    "tags": [
+      "lymphoproliferation",
+      "recurrent infection",
+      "autoimmune cytopenias"
+    ],
+    "relatedPathway": [
+      "alps_fas_pathway",
+      "casp8_deficiency"
+    ],
+    "relatedPhenotype": [
+      "ikbkg_nemo_related_disease",
+      "omenn_syndrome"
+    ],
+    "references": [
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      },
+      {
+        "label": "ALPS and related disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
+    ]
+  },
+  {
+    "id": "ha20",
+    "name": "A20 haploinsufficiency",
+    "aliases": [
+      "HA20"
+    ],
+    "primaryCluster": "inflammatory_brake_failure",
+    "secondaryClusters": [],
+    "genes": [
+      "TNFAIP3"
+    ],
+    "inheritance": [
+      "Autosomal dominant"
+    ],
+    "mechanismChain": [
+      "TNFAIP3 encodes A20, a ubiquitin-editing enzyme that terminates NF-κB signaling downstream of inflammatory receptors.",
+      "Haploinsufficiency leaves inflammatory pathways switched on for too long after stimulation.",
+      "Innate cells overproduce cytokines such as TNF, IL-1, and IL-6, while adaptive immune tolerance is secondarily destabilized.",
+      "The phenotype often resembles early-onset Behçet disease with recurrent fever, mucosal ulcers, vasculitic features, and autoimmunity."
+    ],
+    "hallmarks": [
+      "recurrent fever",
+      "oral ulcers",
+      "genital ulcers",
+      "arthritis",
+      "vasculitis",
+      "autoimmunity"
+    ],
+    "tags": [
+      "vasculitis",
+      "autoantibodies"
+    ],
+    "relatedPathway": [
+      "otulin_deficiency",
+      "rbck1_hoil1_deficiency",
+      "rnf31_hoip_deficiency",
+      "ikbkg_nemo_related_disease"
+    ],
+    "relatedPhenotype": [
+      "dada2",
+      "savi"
+    ],
+    "references": [
+      {
+        "label": "HA20 review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6801109/"
+      },
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
+    ]
+  },
+  {
+    "id": "otulin_deficiency",
+    "name": "OTULIN deficiency",
+    "aliases": [
+      "Otulipenia",
+      "OTULIN-related autoinflammatory syndrome",
+      "ORAS"
+    ],
+    "primaryCluster": "inflammatory_brake_failure",
+    "secondaryClusters": [],
+    "genes": [
+      "OTULIN"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "OTULIN is the deubiquitinase that removes linear ubiquitin chains from signaling complexes.",
+      "Loss of OTULIN causes linear ubiquitin to accumulate abnormally and leaves NF-κB and TNF pathways spontaneously activated.",
+      "Myeloid cells become powerful sources of inflammatory cytokines, and proteostasis defects can spill into interferon activation.",
+      "The phenotype is early-onset systemic inflammation with skin, joint, gut, and autoimmune features."
+    ],
+    "hallmarks": [
+      "recurrent fevers",
+      "panniculitis",
+      "arthritis",
+      "enterocolitis",
+      "failure to thrive",
+      "systemic inflammation"
+    ],
+    "tags": [
+      "enteropathy",
+      "vasculitis"
+    ],
+    "relatedPathway": [
+      "ha20",
+      "rbck1_hoil1_deficiency",
+      "rnf31_hoip_deficiency",
+      "ikbkg_nemo_related_disease"
+    ],
+    "relatedPhenotype": [
+      "savi",
+      "aicardi_goutieres_syndrome"
+    ],
+    "references": [
+      {
+        "label": "OTULIN deficiency study (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5002269/"
+      },
+      {
+        "label": "OTULIN review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
+    ]
+  },
+  {
+    "id": "rbck1_hoil1_deficiency",
+    "name": "RBCK1 / HOIL-1 deficiency",
+    "aliases": [
+      "HOIL-1 deficiency",
+      "LUBAC-related immune dysregulation"
+    ],
+    "primaryCluster": "inflammatory_brake_failure",
+    "secondaryClusters": [],
+    "genes": [
+      "RBCK1"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "RBCK1 encodes HOIL-1, a component of the linear ubiquitin chain assembly complex (LUBAC).",
+      "Loss of HOIL-1 destabilizes LUBAC and makes NF-κB signaling paradoxical: some cell types respond poorly while monocytes can become hyperinflammatory.",
+      "This imbalance produces both immunodeficiency and chronic inflammatory disease rather than clean immune failure in one direction.",
+      "Patients can develop autoinflammation, invasive bacterial infection, amylopectinosis, and autoimmune manifestations."
+    ],
+    "hallmarks": [
+      "autoinflammation",
+      "recurrent bacterial infection",
+      "amylopectinosis",
+      "dermatitis",
+      "systemic inflammation",
+      "autoimmunity"
+    ],
+    "tags": [
+      "recurrent infection",
+      "dermatitis"
+    ],
+    "relatedPathway": [
+      "rnf31_hoip_deficiency",
+      "otulin_deficiency",
+      "ha20",
+      "ikbkg_nemo_related_disease"
+    ],
+    "relatedPhenotype": [
+      "dada2",
+      "savi"
+    ],
+    "references": [
+      {
+        "label": "HOIL-1 deficiency paper (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3514453/"
+      },
+      {
+        "label": "Linear ubiquitin disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
+    ]
+  },
+  {
+    "id": "rnf31_hoip_deficiency",
+    "name": "RNF31 / HOIP deficiency",
+    "aliases": [
+      "HOIP deficiency",
+      "LUBAC-related immune dysregulation"
+    ],
+    "primaryCluster": "inflammatory_brake_failure",
+    "secondaryClusters": [],
+    "genes": [
+      "RNF31"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "RNF31 encodes HOIP, the catalytic engine of the linear ubiquitin chain assembly complex.",
+      "HOIP deficiency impairs balanced linear ubiquitination of receptor signaling complexes and distorts NF-κB control.",
+      "As in HOIL-1 deficiency, fibroblasts can be hyporesponsive while monocytes remain overly inflammatory.",
+      "The syndrome combines immunodeficiency, autoinflammation, and dysregulated tissue inflammation."
+    ],
+    "hallmarks": [
+      "recurrent bacterial infection",
+      "autoinflammation",
+      "lymphangiectasia",
+      "systemic inflammation",
+      "amylopectinosis"
+    ],
+    "tags": [
+      "recurrent infection"
+    ],
+    "relatedPathway": [
+      "rbck1_hoil1_deficiency",
+      "otulin_deficiency",
+      "ha20",
+      "ikbkg_nemo_related_disease"
+    ],
+    "relatedPhenotype": [
+      "dada2",
+      "savi"
+    ],
+    "references": [
+      {
+        "label": "HOIP deficiency paper (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4451137/"
+      },
+      {
+        "label": "Linear ubiquitin disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
+    ]
+  },
+  {
+    "id": "ikbkg_nemo_related_disease",
+    "name": "IKBKG / NEMO-related immune dysregulation",
+    "aliases": [
+      "NEMO-related disease",
+      "NDAS spectrum"
+    ],
+    "primaryCluster": "inflammatory_brake_failure",
+    "secondaryClusters": [],
+    "genes": [
+      "IKBKG"
+    ],
+    "inheritance": [
+      "X-linked"
+    ],
+    "mechanismChain": [
+      "IKBKG encodes NEMO, the regulatory subunit of the IKK complex that enables canonical NF-κB activation.",
+      "Pathogenic variants distort how cells translate receptor stimulation into inflammatory and survival signals.",
+      "Because different cell types depend on NEMO differently, the phenotype can mix immunodeficiency with autoinflammatory or autoimmune tissue injury.",
+      "Clinical presentations span ectodermal dysplasia with immunodeficiency to NEMO-deleted exon 5 autoinflammatory syndrome with uveitis, panniculitis, and hepatitis."
+    ],
+    "hallmarks": [
+      "ectodermal dysplasia",
+      "recurrent infection",
+      "uveitis",
+      "panniculitis",
+      "hepatitis",
+      "autoinflammation"
+    ],
+    "tags": [
+      "recurrent infection",
+      "vasculitis"
+    ],
+    "relatedPathway": [
+      "ha20",
+      "otulin_deficiency",
+      "rbck1_hoil1_deficiency",
+      "rnf31_hoip_deficiency"
+    ],
+    "relatedPhenotype": [
+      "fadd_deficiency",
+      "dada2"
+    ],
+    "references": [
+      {
+        "label": "NEMO/IKBKG review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12221755/"
+      },
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
+    ]
+  },
+  {
+    "id": "il10_signaling_deficiency",
+    "name": "IL-10 signaling deficiency",
+    "aliases": [
+      "IL10 / IL10RA / IL10RB deficiency"
+    ],
+    "primaryCluster": "inflammatory_brake_failure",
+    "secondaryClusters": [],
+    "genes": [
+      "IL10",
+      "IL10RA",
+      "IL10RB"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "IL-10 is a core anti-inflammatory cytokine that tells myeloid and lymphoid cells to stop amplifying mucosal inflammation.",
+      "Defects in IL10, IL10RA, or IL10RB prevent that brake from being transmitted in the intestinal immune system.",
+      "Responses to commensal bacteria remain excessive and tissue-destructive rather than resolving after stimulation.",
+      "The classic result is very-early-onset inflammatory bowel disease with fistulizing colitis and severe perianal disease."
+    ],
+    "hallmarks": [
+      "very-early-onset IBD",
+      "perianal disease",
+      "fistulae",
+      "follicular rash",
+      "failure to thrive"
+    ],
+    "tags": [
+      "enteropathy",
+      "dermatitis"
+    ],
+    "relatedPathway": [
+      "casp8_deficiency",
+      "ipex",
+      "omenn_syndrome"
+    ],
+    "relatedPhenotype": [
+      "ha20",
+      "dada2"
+    ],
+    "references": [
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      },
+      {
+        "label": "IL-10 signaling deficiency review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
+    ]
+  },
+  {
+    "id": "aicardi_goutieres_syndrome",
+    "name": "Aicardi–Goutières syndrome",
+    "aliases": [
+      "AGS"
+    ],
+    "primaryCluster": "interferonopathies",
+    "secondaryClusters": [],
+    "genes": [
+      "TREX1",
+      "RNASEH2A",
+      "RNASEH2B",
+      "RNASEH2C",
+      "SAMHD1",
+      "ADAR1",
+      "IFIH1"
+    ],
+    "inheritance": [
+      "Autosomal recessive",
+      "Autosomal dominant"
+    ],
+    "mechanismChain": [
+      "AGS genes normally metabolize, edit, or ignore endogenous nucleic acids before they can look like viral danger signals.",
+      "When those pathways fail, self DNA or RNA accumulates in forms that activate cGAS-STING or MDA5-driven sensing.",
+      "Innate immune cells maintain a chronic type I interferon program even without infection.",
+      "The phenotype is a prototypic interferonopathy with neuroinflammation, chilblains, and lupus-like autoimmunity in some patients."
+    ],
+    "hallmarks": [
+      "interferon signature",
+      "encephalopathy",
+      "chilblains",
+      "intracranial calcifications",
+      "lupus-like autoimmunity",
+      "neuroinflammation"
+    ],
+    "tags": [
+      "lupus-like",
+      "neuroinflammation",
+      "vasculitis"
+    ],
+    "relatedPathway": [
+      "familial_chilblain_lupus",
+      "savi",
+      "stat1_gof_disease"
+    ],
+    "relatedPhenotype": [
+      "dnase1l3_deficiency",
+      "early_classical_complement_deficiency"
+    ],
+    "references": [
+      {
+        "label": "AGS review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10258176/"
+      },
+      {
+        "label": "Monogenic autoimmunity review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11114701/"
+      }
+    ]
+  },
+  {
+    "id": "familial_chilblain_lupus",
+    "name": "Familial chilblain lupus",
+    "aliases": [],
+    "primaryCluster": "interferonopathies",
+    "secondaryClusters": [],
+    "genes": [
+      "TREX1",
+      "SAMHD1",
+      "IFIH1"
+    ],
+    "inheritance": [
+      "Autosomal dominant",
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "Familial chilblain lupus is a skin-dominant interferonopathy caused by abnormal handling or sensing of self nucleic acids.",
+      "Pathogenic variants in genes such as TREX1, SAMHD1, or IFIH1 keep innate antiviral pathways inappropriately active.",
+      "Type I interferon signaling becomes chronically elevated, especially in acral tissues exposed to cold or vascular stress.",
+      "The result is chilblain lesions with lupus-like autoimmunity rather than ordinary cold injury."
+    ],
+    "hallmarks": [
+      "chilblains",
+      "lupus-like rash",
+      "interferon signature",
+      "autoantibodies",
+      "photosensitivity"
+    ],
+    "tags": [
+      "lupus-like",
+      "autoantibodies",
+      "vasculitis"
+    ],
+    "relatedPathway": [
+      "aicardi_goutieres_syndrome",
+      "savi",
+      "stat1_gof_disease"
+    ],
+    "relatedPhenotype": [
+      "dnase1l3_deficiency",
+      "early_classical_complement_deficiency"
+    ],
+    "references": [
+      {
+        "label": "Monogenic lupus review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6232876/"
+      },
+      {
+        "label": "AGS review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10258176/"
+      }
+    ]
+  },
+  {
+    "id": "savi",
+    "name": "STING-associated vasculopathy with onset in infancy",
+    "aliases": [
+      "SAVI"
+    ],
+    "primaryCluster": "interferonopathies",
+    "secondaryClusters": [],
+    "genes": [
+      "TMEM173"
+    ],
+    "inheritance": [
+      "Autosomal dominant"
+    ],
+    "mechanismChain": [
+      "TMEM173 encodes STING, the adaptor that turns cytosolic DNA sensing into type I interferon production.",
+      "Gain-of-function variants activate STING constitutively even without microbial DNA.",
+      "Endothelial and immune cells are pushed into a chronic interferon-rich inflammatory state that also injures the lung.",
+      "The resulting disease combines vasculopathy, skin ulceration, and interstitial lung disease with variable autoimmunity."
+    ],
+    "hallmarks": [
+      "vasculopathy",
+      "skin ulceration",
+      "chilblains",
+      "interstitial lung disease",
+      "interferon signature",
+      "failure to thrive"
+    ],
+    "tags": [
+      "vasculitis",
+      "interstitial lung disease",
+      "lupus-like"
+    ],
+    "relatedPathway": [
+      "aicardi_goutieres_syndrome",
+      "familial_chilblain_lupus",
+      "stat1_gof_disease"
+    ],
+    "relatedPhenotype": [
+      "dada2",
+      "ha20"
+    ],
+    "references": [
+      {
+        "label": "SAVI discovery paper (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4174543/"
+      },
+      {
+        "label": "SAVI review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6502518/"
+      }
+    ]
+  },
+  {
+    "id": "dada2",
+    "name": "Deficiency of ADA2",
+    "aliases": [
+      "DADA2",
+      "ADA2 deficiency"
+    ],
+    "primaryCluster": "interferonopathies",
+    "secondaryClusters": [
+      "inflammatory_brake_failure"
+    ],
+    "genes": [
+      "ADA2"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "ADA2 deficiency distorts extracellular adenosine biology and skews monocytes or macrophages toward a pro-inflammatory state.",
+      "Myeloid cells produce excess TNF and related inflammatory mediators, while vascular integrity and immune balance deteriorate.",
+      "The pathway defect favors vasculitis, endothelial injury, cytopenias, and immune dysregulation rather than clean adaptive autoimmunity alone.",
+      "The clinical result is a vasculopathy syndrome with strokes, livedo, cytopenias, and variable autoimmune features."
+    ],
+    "hallmarks": [
+      "vasculitis",
+      "livedo",
+      "strokes",
+      "cytopenias",
+      "immunodeficiency",
+      "hepatosplenomegaly"
+    ],
+    "tags": [
+      "vasculitis",
+      "autoimmune cytopenias",
+      "recurrent infection"
+    ],
+    "relatedPathway": [
+      "ha20",
+      "savi",
+      "ikbkg_nemo_related_disease"
+    ],
+    "relatedPhenotype": [
+      "early_classical_complement_deficiency",
+      "otulin_deficiency"
+    ],
+    "references": [
+      {
+        "label": "DADA2 review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11589373/"
+      },
+      {
+        "label": "MedlinePlus Genetics: ADA2 deficiency",
+        "url": "https://medlineplus.gov/genetics/condition/adenosine-deaminase-2-deficiency/"
+      }
+    ]
+  },
+  {
+    "id": "stat3_gof_disease",
+    "name": "STAT3 gain-of-function disease",
+    "aliases": [
+      "STAT3 GOF disease"
+    ],
+    "primaryCluster": "jak_stat_gof",
+    "secondaryClusters": [],
+    "genes": [
+      "STAT3"
+    ],
+    "inheritance": [
+      "Autosomal dominant"
+    ],
+    "mechanismChain": [
+      "Activating STAT3 mutations amplify transcriptional responses to multiple cytokines.",
+      "This reshapes T-cell differentiation and produces quantitative and qualitative defects in regulatory T cells.",
+      "Immune responses become simultaneously overactive, poorly constrained, and developmentally skewed across several organs.",
+      "Patients therefore develop early-onset multiorgan autoimmunity, lymphoproliferation, cytopenias, and inflammatory lung or gut disease."
+    ],
+    "hallmarks": [
+      "autoimmune cytopenias",
+      "lymphadenopathy",
+      "enteropathy",
+      "interstitial lung disease",
+      "short stature",
+      "endocrinopathy"
+    ],
+    "tags": [
+      "autoimmune cytopenias",
+      "lymphoproliferation",
+      "enteropathy",
+      "interstitial lung disease",
+      "endocrinopathy"
+    ],
+    "relatedPathway": [
+      "stat1_gof_disease",
+      "ctla4_haploinsufficiency",
+      "ipex"
+    ],
+    "relatedPhenotype": [
+      "activated_pi3k_delta_syndrome",
+      "alps_fas_pathway"
+    ],
+    "references": [
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      },
+      {
+        "label": "STAT3 GOF disease review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
+    ]
+  },
+  {
+    "id": "stat1_gof_disease",
+    "name": "STAT1 gain-of-function disease",
+    "aliases": [
+      "STAT1 GOF disease"
+    ],
+    "primaryCluster": "jak_stat_gof",
+    "secondaryClusters": [
+      "interferonopathies"
+    ],
+    "genes": [
+      "STAT1"
+    ],
+    "inheritance": [
+      "Autosomal dominant"
+    ],
+    "mechanismChain": [
+      "STAT1 gain-of-function mutations exaggerate transcriptional responses to interferons and related cytokines.",
+      "Persistent STAT1 signaling impairs balanced helper-cell differentiation, including IL-17 immunity, while also intensifying inflammatory set points.",
+      "Patients therefore combine infection susceptibility, especially chronic mucocutaneous candidiasis, with a substantial burden of autoimmunity.",
+      "Autoimmune thyroid disease, diabetes, hepatitis, cytopenias, lupus-like disease, and inflammatory bowel disease can all appear on this background."
+    ],
+    "hallmarks": [
+      "chronic mucocutaneous candidiasis",
+      "autoimmune thyroid disease",
+      "type 1 diabetes",
+      "cytopenias",
+      "hepatitis",
+      "inflammatory bowel disease"
+    ],
+    "tags": [
+      "chronic candidiasis",
+      "endocrinopathy",
+      "autoimmune cytopenias",
+      "enteropathy",
+      "lupus-like"
+    ],
+    "relatedPathway": [
+      "stat3_gof_disease",
+      "savi",
+      "aicardi_goutieres_syndrome"
+    ],
+    "relatedPhenotype": [
+      "familial_chilblain_lupus",
+      "ipex"
+    ],
+    "references": [
+      {
+        "label": "STAT1 GOF international cohort (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4920021/"
+      },
+      {
+        "label": "STAT1 GOF immunobiology review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6502518/"
+      }
+    ]
+  },
+  {
+    "id": "early_classical_complement_deficiency",
+    "name": "Early classical complement deficiency",
+    "aliases": [
+      "C1q / C1r / C1s / C2 / C4 deficiency with lupus-like autoimmunity"
+    ],
+    "primaryCluster": "complement_clearance",
+    "secondaryClusters": [],
+    "genes": [
+      "C1QA",
+      "C1QB",
+      "C1QC",
+      "C1R",
+      "C1S",
+      "C2",
+      "C4A",
+      "C4B"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "The early classical complement pathway helps opsonize immune complexes and apoptotic debris for silent clearance.",
+      "When C1q, C1r, C1s, C2, or C4 are absent, self antigens linger in extracellular spaces instead of being cleared quickly.",
+      "That debris becomes a durable source of nuclear antigen for B-cell activation and autoantibody production.",
+      "The phenotype is strongly enriched for lupus or lupus-like autoimmunity, especially in C1q deficiency."
+    ],
+    "hallmarks": [
+      "lupus-like disease",
+      "photosensitive rash",
+      "glomerulonephritis",
+      "autoantibodies",
+      "immune complex disease",
+      "vasculitis"
+    ],
+    "tags": [
+      "lupus-like",
+      "autoantibodies",
+      "vasculitis"
+    ],
+    "relatedPathway": [
+      "dnase1l3_deficiency",
+      "dnase1_deficiency"
+    ],
+    "relatedPhenotype": [
+      "aicardi_goutieres_syndrome",
+      "familial_chilblain_lupus",
+      "dada2"
+    ],
+    "references": [
+      {
+        "label": "Complement deficiency and SLE review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4764694/"
+      },
+      {
+        "label": "Complement and lupus review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3240161/"
+      }
+    ]
+  },
+  {
+    "id": "dnase1l3_deficiency",
+    "name": "DNASE1L3 deficiency",
+    "aliases": [],
+    "primaryCluster": "complement_clearance",
+    "secondaryClusters": [],
+    "genes": [
+      "DNASE1L3"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "DNASE1L3 normally digests extracellular chromatin and membrane-associated DNA released from dying cells.",
+      "When DNASE1L3 is absent, chromatin persists in an immunogenic form instead of being rendered harmless.",
+      "B cells and other immune sensors encounter a larger, more persistent pool of nuclear self antigen.",
+      "The result is monogenic lupus with strong anti-DNA autoantibody formation and systemic inflammation."
+    ],
+    "hallmarks": [
+      "juvenile lupus",
+      "anti-dsDNA antibodies",
+      "vasculitis",
+      "hypocomplementemia",
+      "glomerulonephritis"
+    ],
+    "tags": [
+      "lupus-like",
+      "autoantibodies",
+      "vasculitis"
+    ],
+    "relatedPathway": [
+      "dnase1_deficiency",
+      "early_classical_complement_deficiency"
+    ],
+    "relatedPhenotype": [
+      "aicardi_goutieres_syndrome",
+      "familial_chilblain_lupus"
+    ],
+    "references": [
+      {
+        "label": "Monogenic lupus review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6232876/"
+      },
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
+    ]
+  },
+  {
+    "id": "dnase1_deficiency",
+    "name": "DNASE1 deficiency",
+    "aliases": [],
+    "primaryCluster": "complement_clearance",
+    "secondaryClusters": [],
+    "genes": [
+      "DNASE1"
+    ],
+    "inheritance": [
+      "Autosomal recessive",
+      "Autosomal dominant"
+    ],
+    "mechanismChain": [
+      "DNASE1 helps digest extracellular DNA released into plasma and tissues.",
+      "Loss of function increases persistence of self DNA and lowers the threshold for anti-DNA immune responses.",
+      "Nuclear self antigens therefore remain available to drive autoantibody production and inflammatory immune-complex formation.",
+      "The resulting phenotype sits on the monogenic lupus spectrum."
+    ],
+    "hallmarks": [
+      "lupus-like disease",
+      "anti-DNA antibodies",
+      "glomerulonephritis",
+      "immune complex disease"
+    ],
+    "tags": [
+      "lupus-like",
+      "autoantibodies"
+    ],
+    "relatedPathway": [
+      "dnase1l3_deficiency",
+      "early_classical_complement_deficiency"
+    ],
+    "relatedPhenotype": [
+      "aicardi_goutieres_syndrome"
+    ],
+    "references": [
+      {
+        "label": "Monogenic lupus review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6232876/"
+      },
+      {
+        "label": "Primary immune regulatory disorders review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
+    ]
+  },
+  {
+    "id": "prkcd_deficiency",
+    "name": "PRKCD deficiency",
+    "aliases": [
+      "PKCδ deficiency"
+    ],
+    "primaryCluster": "b_cell_tolerance",
+    "secondaryClusters": [],
+    "genes": [
+      "PRKCD"
+    ],
+    "inheritance": [
+      "Autosomal recessive"
+    ],
+    "mechanismChain": [
+      "PKCδ is a signaling node that helps trigger apoptosis or deletion in autoreactive B cells.",
+      "PRKCD deficiency makes B cells resistant to B-cell receptor and calcium-dependent apoptosis.",
+      "Autoreactive clones therefore survive, proliferate, and enter antibody-producing pathways that should have been closed to them.",
+      "The phenotype is Mendelian juvenile lupus with prominent B-cell-driven autoimmunity."
+    ],
+    "hallmarks": [
+      "juvenile lupus",
+      "lymphadenopathy",
+      "hepatosplenomegaly",
+      "high B-cell numbers",
+      "autoantibodies",
+      "glomerulonephritis"
+    ],
+    "tags": [
+      "lupus-like",
+      "autoantibodies",
+      "lymphoproliferation"
+    ],
+    "relatedPathway": [
+      "activated_pi3k_delta_syndrome",
+      "bach2_related_immunodeficiency_and_autoimmunity"
+    ],
+    "relatedPhenotype": [
+      "dnase1l3_deficiency",
+      "early_classical_complement_deficiency"
+    ],
+    "references": [
+      {
+        "label": "PRKCD deficiency study (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4066615/"
+      },
+      {
+        "label": "Monogenic lupus review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6232876/"
+      }
+    ]
+  },
+  {
+    "id": "activated_pi3k_delta_syndrome",
+    "name": "Activated PI3K delta syndrome",
+    "aliases": [
+      "APDS"
+    ],
+    "primaryCluster": "b_cell_tolerance",
+    "secondaryClusters": [],
+    "genes": [
+      "PIK3CD",
+      "PIK3R1"
+    ],
+    "inheritance": [
+      "Autosomal dominant"
+    ],
+    "mechanismChain": [
+      "PIK3CD gain-of-function or PIK3R1 loss distorts the PI3K-AKT-mTOR signaling axis in lymphocytes.",
+      "Naive T-cell and B-cell pools shrink, transitional B cells expand, and lymphocytes become developmentally skewed and prematurely exhausted.",
+      "The immune system therefore combines poor host defense with persistent lymphoid activation and unstable tolerance.",
+      "Clinically this produces recurrent sinopulmonary infection, lymphoproliferation, enteropathy, cytopenias, and antibody dysregulation."
+    ],
+    "hallmarks": [
+      "recurrent sinopulmonary infection",
+      "bronchiectasis",
+      "lymphadenopathy",
+      "splenomegaly",
+      "enteropathy",
+      "autoimmune cytopenias",
+      "hypogammaglobulinemia"
+    ],
+    "tags": [
+      "recurrent infection",
+      "lymphoproliferation",
+      "enteropathy",
+      "autoimmune cytopenias",
+      "hypogammaglobulinemia"
+    ],
+    "relatedPathway": [
+      "prkcd_deficiency",
+      "bach2_related_immunodeficiency_and_autoimmunity",
+      "ctla4_haploinsufficiency"
+    ],
+    "relatedPhenotype": [
+      "alps_fas_pathway",
+      "stat3_gof_disease"
+    ],
+    "references": [
+      {
+        "label": "GeneReviews: APDS",
+        "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK611655/"
+      },
+      {
+        "label": "PIRD review (PMC)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10645063/"
+      }
     ]
   }
 ]
